@@ -1,0 +1,39 @@
+<style>
+input#total{text-align: center;}
+
+</style>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="calculparking" style="background: #ededff; box-shadow: 07px 07px; height: 220px; width: 350px; ">
+<br />
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PARKING TIME CALCULATION</h3>
+<br />
+&nbsp;&nbsp;<label>Arrival  date  &amp;  Time              </label>
+&nbsp; &nbsp; &nbsp; &nbsp;<input id="old" name="old" type="date" />
+<br /><br />
+&nbsp;&nbsp;<label>Departure date &amp; Time </label>
+  &nbsp;<input id="new" name="new" onblur="document.getElementById('total').value = (new Date(this.value) - new Date(old.value))/(1000*60*60*24)" type="date" />
+<br /><br />
+&nbsp;&nbsp;<label>Difference in days :</label>
+ 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="total" name="total" onchange="changeDate()" type="text" style="width:50px" /> 
+
+
+</div>
+
+<script>
+
+
+
+
+
+var date_diff_indays = function(date1, date2) {
+dt1 = new Date(date1);
+dt2 = new Date(date2);
+return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+}
+console.log(date_diff_indays('04/02/2014', '11/04/2014'));
+console.log(date_diff_indays('12/02/2014', '11/04/2014'));
+
+</script>
