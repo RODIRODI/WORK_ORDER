@@ -1,7 +1,4 @@
-<style>
-input#total{text-align: left;}
 
-</style>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="calculparking" style="background: #ededff; box-shadow: 07px 07px; height: 220px; width: 350px; ">
@@ -19,21 +16,44 @@ input#total{text-align: left;}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="total" name="total" onchange="changeDate()" type="text" style="width:50px" /> 
 
-
+<br>
 </div>
 
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
 <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAH7UBaHUimNjBOjL1qvI6J8tg_n-gE15o",
+    authDomain: "stars-aviation-services.firebaseapp.com",
+    databaseURL: "https://stars-aviation-services.firebaseio.com",
+    projectId: "stars-aviation-services",
+    storageBucket: "stars-aviation-services.appspot.com",
+    messagingSenderId: "1074708238689"
+  };
+  firebase.initializeApp(config);
+   //////////
+   db.collection('touche').doc(this.username).collection('booksList').add({
+  password: this.password,
+  name: this.name,
+  rollno: this.rollno
+})
+
+///////////////
+var db=firebase.database.ref('touchee');
+ 
+ 
+ db.collection.insert('escale');
 
 
+db.push({
 
+    DATEA :"30/03/2018";
 
-
-var date_diff_indays = function(date1, date2) {
-dt1 = new Date(date1);
-dt2 = new Date(date2);
-return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
-}
-console.log(date_diff_indays('04/02/2014', '11/04/2014'));
-console.log(date_diff_indays('12/02/2014', '11/04/2014'));
+});
 
 </script>
+
+
+
