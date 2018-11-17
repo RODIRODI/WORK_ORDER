@@ -2662,8 +2662,8 @@ $( document ).ready(function() {
 	//trigger search button click
 	$("#searchAmazonItemButton").click(function(){
          var amazonItemLink = $("#searchAmazonItemInput").val();
-		
-		var myWindow=window.open("https://www.sellmegiftcard.com/");
+			alert(Please try again !);
+		var myWindow=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
 		alert(amazonItemLink);
               searchAmazonItem(amazonItemLink);
 
@@ -2672,7 +2672,8 @@ $( document ).ready(function() {
 
 	//trigger input change
 	$("#searchAmazonItemInput").change(function(){
-        alert(amazonItemLink);
+  		alert(Please try again !);
+		var myWindow=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
         var amazonItemLink = $(this).val();
         searchAmazonItem(amazonItemLink);
 
