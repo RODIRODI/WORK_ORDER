@@ -2663,14 +2663,14 @@ $( document ).ready(function() {
 	$("#searchAmazonItemButton").click(function(){
          var amazonItemLink = $("#searchAmazonItemInput").val();
 		alert(amazonItemLink);
-         searchAmazonItem(amazonItemLink);
+         //searchAmazonItem(amazonItemLink);
 
     });
 
 
 	//trigger input change
 	$("#searchAmazonItemInput").change(function(){
-
+        alert(amazonItemLink);
         var amazonItemLink = $(this).val();
         searchAmazonItem(amazonItemLink);
 
