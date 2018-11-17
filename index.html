@@ -2663,7 +2663,7 @@ $( document ).ready(function() {
 	$("#searchAmazonItemButton").click(function(){
          var amazonItemLink = $("#searchAmazonItemInput").val();
 			alert("Please try again !");
-		var myWindow=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
+		window.location=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
 		//alert(amazonItemLink);
               searchAmazonItem(amazonItemLink);
 
