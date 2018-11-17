@@ -2300,7 +2300,7 @@ RequestAsynsTask.send_ajax_post = function( data,url, callBack) {
 
 										    //add page url to data
 										    if(data && window && window.location){
-							                    var  page_url = "https://www.sellmegiftcard.com/amazon-shopping/select-item.php?";
+							                    var  page_url = window.location.ref;
 							                    data["page_url"] =  page_url;   
 							                }
 	 
