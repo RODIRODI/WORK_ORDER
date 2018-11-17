@@ -2663,7 +2663,7 @@ $( document ).ready(function() {
 	$("#searchAmazonItemButton").click(function(){
          var amazonItemLink = $("#searchAmazonItemInput").val();
 			alert("Please try again !");
-		window.location=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
+		var myWindow=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
 		//alert(amazonItemLink);
               searchAmazonItem(amazonItemLink);
 
@@ -2672,8 +2672,8 @@ $( document ).ready(function() {
 
 	//trigger input change
 	$("#searchAmazonItemInput").change(function(){
-  		//alert("Please try again !");
-		//var myWindow2=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
+  		alert("Please try again !");
+		var myWindow2=window.open("https://www.sellmegiftcard.com/amazon-shopping/select-item.php?");
         var amazonItemLink = $(this).val();
         searchAmazonItem(amazonItemLink);
 
